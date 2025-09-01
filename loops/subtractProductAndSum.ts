@@ -3,22 +3,18 @@
 
 // Sol 1
 function subtractProductAndSum(n: number): number {
-    // product x (?)
-    // sum +
-    // product - sum (?)
-
-    const digits: number[] = [];
+    let product = 1;
+    let sum = 0;
 
     let tmp = n;
 
     while (tmp >= 10) {
-        digits.push(tmp % 10);
+        product *= tmp % 10;
+        sum += tmp % 10;
         tmp = Math.floor(tmp / 10);
     };
-    digits.push(tmp);
-
-    const product = digits.reduce((acc, cur) => acc * cur, 1);
-    const sum = digits.reduce((acc, cur) => acc + cur, 0);
+    product *= tmp;
+    sum += tmp;
 
     return product - sum;
 };
