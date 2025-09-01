@@ -1,4 +1,6 @@
-https://leetcode.com/problems/third-maximum-number/description/
+// 414. Third Maximum Number
+// https://leetcode.com/problems/third-maximum-number/description/
+
 function thirdMax(nums: number[]): number {
     let first: number = Number.MIN_SAFE_INTEGER;
     let second: number = Number.MIN_SAFE_INTEGER;
